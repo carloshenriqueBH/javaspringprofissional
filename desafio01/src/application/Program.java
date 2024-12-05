@@ -3,8 +3,6 @@ package application;
 import entities.Produtos;
 import services.AdicionaFretePedido;
 import services.CalculaDescontoPedido;
-import services.CalculaValorLiquido;
-
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -26,8 +24,7 @@ public class Program {
 
         CalculaDescontoPedido calculaDescontoPedido = new CalculaDescontoPedido();
         AdicionaFretePedido adicionaFretePedido = new AdicionaFretePedido();
-        CalculaValorLiquido calculaValorLiquido = new CalculaValorLiquido();
-        
+
         Double valorPedidoComDesconto = calculaDescontoPedido.desconto(valorBase,desconto);
         Double valorPedidoComFrete = adicionaFretePedido.retornaPedidoComFrete(valorPedidoComDesconto);
 
@@ -36,7 +33,5 @@ public class Program {
         System.out.printf("Valor inicial do pedido: %.2f%n",produto.getValorBase());
         System.out.printf("Valor do pedido com desconto: %.2f%n",valorPedidoComDesconto);
         System.out.printf("Valor do pedido com frete: %.2f%n",valorPedidoComFrete);
-
     }
-
 }
