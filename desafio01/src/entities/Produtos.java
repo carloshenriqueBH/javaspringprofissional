@@ -3,16 +3,18 @@ package entities;
 public class Produtos {
 
     private Integer codigo;
-    private Double valorDesconto;
+    private Double desconto;
+    private Double valorBase;
 
     public Produtos() {
     }
 
-    public Produtos(Integer codigo, Double valorDesconto) {
+    public Produtos(Integer codigo, Double desconto, Double valorBase) {
         this.codigo = codigo;
-        this.valorDesconto = valorDesconto;
-
+        this.desconto = desconto;
+        this.valorBase = valorBase;
     }
+
 
     public Integer getCodigo() {
         return codigo;
@@ -22,11 +24,19 @@ public class Produtos {
         this.codigo = codigo;
     }
 
-    public Double getValorDesconto() {
-        return valorDesconto;
+    public Double getDesconto() {
+        return desconto;
     }
 
-    public void setValorDesconto(Double valorDesconto) {
-        this.valorDesconto = valorDesconto;
+    public void setDesconto(Double desconto) {
+        this.desconto = desconto;
+    }
+
+    public Double getValorBase() {
+        return valorBase;
+    }
+
+    public void setValorBase(Double valorBase) {
+        this.valorBase = valorBase;
     }
 }
